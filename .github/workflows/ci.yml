@@ -48,4 +48,12 @@ jobs:
       if: github.ref == 'refs/heads/main'
       run: firebase deploy --only hosting
       env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        apiKey: '${{ secrets.APIKEY }}'
+        authDomain: '${{ secrets.AUTHDOMAIN }}'
+        projectId: '${{ secrets.PROJECTID }}'
+        storageBucket: '${{ secrets.STORAGEBUCKET }}'
+        messagingSenderId: '${{ secrets.MESSAGINGSENDERID }}'
+        appId: '${{ secrets.APPID }}'
+        measurementId: '${{ secrets.MEASUREMENTID }}'
+
+

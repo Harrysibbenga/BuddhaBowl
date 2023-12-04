@@ -14,7 +14,10 @@ jobs:
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.REPO_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUDDHA_BOWL_3ACFC }}'
-          channelId: live
-          projectId: buddha-bowl-3acfc
+          apiKey: '${{ secrets.APIKEY }}'
+          authDomain: '${{ secrets.AUTHDOMAIN }}'
+          projectId: '${{ secrets.PROJECTID }}'
+          storageBucket: '${{ secrets.STORAGEBUCKET }}'
+          messagingSenderId: '${{ secrets.MESSAGINGSENDERID }}'
+          appId: '${{ secrets.APPID }}'
+          measurementId: '${{ secrets.MEASUREMENTID }}'
