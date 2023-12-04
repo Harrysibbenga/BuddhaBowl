@@ -38,11 +38,11 @@ jobs:
     - name: Build Storybook
       run: npm run build-storybook
 
-    # Optional: Deploy Storybook to a hosting service
-    - name: Deploy Storybook
-      if: github.ref == 'refs/heads/main'
-      run: npm run deploy-storybook
-      # Ensure you have a script 'deploy-storybook' in package.json for deployment
+    # # Optional: Deploy Storybook to a hosting service
+    # - name: Deploy Storybook
+    #   if: github.ref == 'refs/heads/main'
+    #   run: npm run deploy-storybook
+    #   # Ensure you have a script 'deploy-storybook' in package.json for deployment
 
     # - name: Setup Strapi Environment
     #   run: cp config/environments/development/database.json config/environments/test/database.json
