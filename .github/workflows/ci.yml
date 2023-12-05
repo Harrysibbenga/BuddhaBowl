@@ -57,7 +57,7 @@ jobs:
     #   # This assumes you have a script for seeding your Strapi database
 
     - name: Copy Build to Public Directory
-      run: cp -r dist/* public/
+      run: mkdir -p public && rm -rf public/* && cp -r dist/* public/
 
     - name: Deploy to Firebase Hosting
       if: github.ref == 'refs/heads/main'
