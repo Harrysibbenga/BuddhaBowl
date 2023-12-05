@@ -56,6 +56,9 @@ jobs:
     #   run: npm run strapi-seed
     #   # This assumes you have a script for seeding your Strapi database
 
+    - name: Copy Build to Public Directory
+      run: mkdir -p public && rm -rf public/* && cp -r dist/* public/
+
     - name: Deploy to Firebase Hosting
       if: github.ref == 'refs/heads/main'
       uses: FirebaseExtended/action-hosting-deploy@v0
