@@ -32,7 +32,7 @@ jobs:
     - name: Run Tests
       run: npm run test
 
-    - name: Build Nuxt App
+    - name: Build Vue 3 App
       run: npm run build
 
     - name: Build Storybook
