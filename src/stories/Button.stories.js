@@ -1,34 +1,35 @@
-import MyButton from './ButtonV.vue';
+import MyButton from './Buttons.vue';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Example/Button',
+  title: 'Components/Buttons',
   component: MyButton,
   tags: ['autodocs'],
   argTypes: {
-    color: {
-      control: 'color',
-    },
-    onClick: {},
-    size: {
-      control: {
-        type: 'select',
-      },
-      options: ['small', 'medium', 'large'],
-    },
+    color: { control: 'color' },
+    size: { control: 'select', options: ['x-small', 'small', 'default', 'large','x-large'] },
+    disabled: { control: 'boolean' },
+    appendIcon: { control: 'text' },
+    prependIcon: { control: 'text' },
+    variant: { control: 'select', options: ['text' , 'flat' , 'elevated' , 'tonal' , 'outlined' , 'plain'] },
+    loading: Boolean,
+    tile: { control: 'boolean' },
+    flat: { control: 'boolean' },
+    rounded: { control: 'boolean' },
+    // Add additional props here as needed
   },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary = {
   args: {
     label: 'Button',
+    color: 'primary',
   },
 };
 
 export const Secondary = {
   args: {
     label: 'Button',
+    color: 'secondary',
   },
 };
 
@@ -45,3 +46,5 @@ export const Small = {
     label: 'Button',
   },
 };
+
+// Additional stories can be added here to demonstrate other combinations of props
