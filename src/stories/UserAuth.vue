@@ -2,8 +2,8 @@
     <v-container class="front-page" fluid>
       <v-row justify="center" align="center">
         <v-col cols="12" sm="8" md="6" class="text-center">
-          <h1>Welcome to My Buddha Bowl App!</h1>
-          <MyButton label="View Recipes" color="primary" />
+          <h1>Login</h1>
+          <MyButton label="Login" color="primary" />
         </v-col>
       </v-row>
     </v-container>
@@ -13,8 +13,12 @@
 import MyButton from './Button.vue';
 
 export default {
-  name: 'WelcomePage',
+  name: 'UserAuth',
   componets: {MyButton},
+  props: {
+    register: { type: Boolean, default: false },
+    loggedIn: { type: Boolean, default: false },
+  }
 }
 </script>
 

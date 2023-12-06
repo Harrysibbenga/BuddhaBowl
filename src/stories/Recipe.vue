@@ -1,6 +1,6 @@
 <template>
-  <v-card max-width="344" :id="recipe.id">
-    <v-img :src="recipe.imageUrl" height="194px"></v-img>
+  <v-card max-width="100vw" :id="recipe.id">
+    <v-img :src="recipe.imageUrl" height="60vh"></v-img>
     <v-card-title>{{ recipe.title }}</v-card-title>
     <v-card-subtitle>{{ recipe.description }}</v-card-subtitle>
     <v-card-text>

@@ -1,26 +1,29 @@
 <template>
   <div class="fill-height">
     <template v-if="loading">
-      <v-container class="fill-height no-recipe-screen">
+      <v-container class="fill-height no-recipe-screen" fluid>
         <v-row justify="space" align="center" class="fill-height" >
-          <v-col cols="12" class="text-center fill-height d-flex flex-column justify-space-between">
+          <v-col cols="12" class="text-center fill-height d-flex flex-column justify-space-between loading-cont">
             <h2 class="text-white">Buddha Bowl</h2>
-            <v-btn color="#05caca" size="x-large" class="loading-btn" loading icon></v-btn>
-            <!-- <v-img max-height="60vh" width="75vw" class='mx-auto' src="../assets/imgs/bg.png"></v-img> -->
+            <v-img max-height="100vh" width="100vw" class="loading-img" src="../assets/imgs/loading.png"></v-img>
+            <h2 class="text-white">Page Loading</h2>
           </v-col>
         </v-row>
       </v-container>
     </template>
 
     <template v-else-if="isEmpty">
-      <v-container class="fill-height no-recipe-screen">
+      <v-container class="fill-height no-recipe-screen" fluid>
         <v-row justify="space" align="center" class="fill-height" >
           <v-col cols="12" class="text-center fill-height d-flex flex-column justify-space-between">
             <h2 class="text-white">No Recipes</h2>
             <v-img max-height="60vh" width="75vw" class='mx-auto' src="../assets/imgs/bg.png"></v-img>
-            <v-btn color="blue" large class="mt-5">
-              Create Recipe
-            </v-btn>
+            <MyButton
+              label="Create Recipe"
+              color="white"
+              gradient-start="#ffffff"
+              gradient-end="#e7eada"
+            />
           </v-col>
         </v-row>
       </v-container>
@@ -43,11 +46,12 @@
 
 <script>
 import Recipe from './Recipe.vue';
+import MyButton from './Button.vue';
 import { reactive, computed } from 'vue';
 
 export default {
   name: 'RecipeList',
-  components: { Recipe },
+  components: { Recipe, MyButton },
   props: {
     recipes: { type: Array, required: true, default: () => [] },
     loading: { type: Boolean, default: false },
@@ -80,10 +84,26 @@ export default {
 .no-recipe-screen {
   background-color: #05caca;
 }
-.loading-btn {
+.loading-img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0%;
+  left: 0%;
+}
+
+.loading-img {
+  animation: spin 20s linear infinite;
+}
+
+.loading-cont {
+  position: relative;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

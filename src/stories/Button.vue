@@ -1,5 +1,5 @@
 <template>
-  <v-btn class="custom-button v-btn" block @click="onClick" :color="color" :size="size" :disabled="disabled" :appendIcon="appendIcon" :prependIcon="prependIcon" :variant="variant" :tile="tile" :rounded="rounded">{{ label }}</v-btn>
+  <v-btn class="custom-button v-btn" @click="onClick" :color="color" :size="size" :disabled="disabled" :appendIcon="appendIcon" :prependIcon="prependIcon" :variant="variant" :tile="tile" :rounded="rounded">{{ label }}</v-btn>
 </template>
 
 <script>
