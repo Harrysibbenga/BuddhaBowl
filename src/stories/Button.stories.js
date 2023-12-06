@@ -1,11 +1,11 @@
-import MyButton from './Buttons.vue';
+import MyButton from './Button.vue';
 
 export default {
   title: 'Components/Buttons',
   component: MyButton,
   tags: ['autodocs'],
   argTypes: {
-    color: { control: 'color' },
+    color: { control: 'select', options: ['primary', 'secondary','accent','error','info','success','warning','black','white'] },
     size: { control: 'select', options: ['x-small', 'small', 'default', 'large','x-large'] },
     disabled: { control: 'boolean' },
     appendIcon: { control: 'text' },
@@ -15,7 +15,8 @@ export default {
     tile: { control: 'boolean' },
     flat: { control: 'boolean' },
     rounded: { control: 'boolean' },
-    // Add additional props here as needed
+    gradientStart: { control: 'color' },
+    gradientEnd: { control: 'color' }
   },
 };
 
@@ -26,25 +27,25 @@ export const Primary = {
   },
 };
 
-export const Secondary = {
+export const ViewRecipes = {
   args: {
-    label: 'Button',
-    color: 'secondary',
+    label: 'View Recipes',
+    color: 'primary',
   },
 };
 
-export const Large = {
+export const CreateRecipes = {
   args: {
-    size: 'large',
-    label: 'Button',
+    label: 'Create Recipe',
+    color: 'white',
+    gradientStart: '#ffffff',
+    gradientEnd: '#e7eada',
   },
 };
 
-export const Small = {
+export const Login = {
   args: {
-    size: 'small',
-    label: 'Button',
+    label: 'Login',
+    color: 'primary',
   },
 };
-
-// Additional stories can be added here to demonstrate other combinations of props

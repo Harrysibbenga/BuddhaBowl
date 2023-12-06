@@ -1,7 +1,7 @@
 <template>
-  <HelloWorld />
+  <WelcomeSection />
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+  import WelcomeSection from '@/components/sections/WelcomeSection.vue'
 </script>

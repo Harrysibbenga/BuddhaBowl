@@ -1,6 +1,9 @@
 # Vue build outputs
 dist
 
+# Story book Tutorial
+taskbox
+
 # Node dependencies
 node_modules
 

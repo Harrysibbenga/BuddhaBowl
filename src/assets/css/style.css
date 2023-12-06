@@ -1,0 +1,102 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&family=Lobster&display=swap');
+
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Text - Roboto for readability */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Base font size */
+    line-height: 1.6; /* Optimal for reading */
+    color: #333; /* Dark color for readability */
+    background-color: #fff; /* Light background */
+}
+
+/* Headers - Montserrat for a modern look */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Slightly darker than the body text */
+}
+
+h1 {
+    font-size: 2.5em; /* 40px */
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2em; /* 32px */
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 1.75em; /* 28px */
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.5em; /* 24px */
+    margin-bottom: 1.25em;
+}
+
+/* Special Headings - Lobster for personality */
+.special-heading {
+    font-family: 'Lobster', cursive;
+    color: #27ae60; /* Vibrant color */
+    font-size: 2em;
+}
+
+/* Links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+/* Vuetify Buttons - Consistent Font and Style */
+.v-btn {
+    font-family: 'Roboto', sans-serif; /* Recommended font for readability */
+    font-weight: 500; /* Slightly bolder for emphasis */
+    text-transform: uppercase; /* Optional: Makes button text uppercase for more prominence */
+    letter-spacing: 0.05em; /* Optional: Adjust letter spacing for aesthetics */
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2em; /* 32px */
+    }
+
+    h2 {
+        font-size: 1.75em; /* 28px */
+    }
+
+    h3 {
+        font-size: 1.5em; /* 24px */
+    }
+
+    h4 {
+        font-size: 1.25em; /* 20px */
+    }
+
+    .special-heading {
+        font-size: 1.75em;
+    }
+}
