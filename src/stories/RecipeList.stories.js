@@ -16,7 +16,7 @@ export default {
 export const Default = {
   args: {
     // Shaping the stories through args composition.
-    // The data was inherited from the Default story in task.stories.js.
+    // The data was inherited from the Default story in recipe.stories.js.
     recipes: [
       { ...RecipeStories.Default.args.recipe, id: '1', title: 'recipe 1', description: 'Recipe Description', imageUrl: 'image-url.jpg', duration: '30min', isFavorite: false},
       { ...RecipeStories.Default.args.recipe, id: '2', title: 'recipe 2', description: 'Recipe Description', imageUrl: 'image-url.jpg', duration: '30min', isFavorite: false},

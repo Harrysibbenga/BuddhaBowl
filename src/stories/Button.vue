@@ -25,11 +25,11 @@ export default {
     rounded: Boolean,
     gradientStart: {
       type: String,
-      default: '#00dabd',
+      default: '',
     },
     gradientEnd: {
       type: String,
-      default: '#03bfab',
+      default: '',
     }
   },
 
@@ -57,7 +57,7 @@ export default {
 }
 
 .custom-button:hover {
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 
 .custom-button:active {

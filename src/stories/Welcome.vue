@@ -1,9 +1,10 @@
 <template>
-    <v-container class="front-page" fluid>
-      <v-row justify="center" align="center">
-        <v-col cols="12" sm="8" md="6" class="text-center">
-          <h1>Welcome to My Buddha Bowl App!</h1>
-          <MyButton label="View Recipes" color="primary" />
+    <v-container fluid class="bg-welcome fill-height">
+      <v-row justify="center" align="center" class="fill-height">
+        <v-col cols="12" class="text-center d-flex flex-column justify-space-between fill-height">
+          <h1 :class="textColor">Welcome to the Buddha Bowl App!</h1>
+          <v-img max-height="60vh" width="75vw" class='mx-auto' src="../assets/imgs/buddha-welcome1.png"></v-img>
+          <MyButton label="View Recipes" color="accent" />
         </v-col>
       </v-row>
     </v-container>
@@ -14,14 +15,28 @@ import MyButton from './Button.vue';
 
 export default {
   name: 'WelcomePage',
-  componets: {MyButton},
+  components: {MyButton},
+  props: {
+    gradientStart: {
+      type: String,
+      default: '#ffffff',
+    },
+    gradientEnd: {
+      type: String,
+      default: '#e7d6b7',
+    },
+    textColor: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 
 <style scoped>
-.front-page {
-  background-image: url('/path-to-your-background-image.jpg');
-  background-size: cover;
-  background-position: center;
+.bg-welcome {
+  height: 100vh;
+  background: rgb(231,214,183);
+  background: radial-gradient(circle, rgba(231,214,183,0.38137261740633754) 0%, rgba(231,214,183,1) 74%);
 }
 </style>

@@ -49,3 +49,11 @@ export const Login = {
     color: 'primary',
   },
 };
+
+
+export const Register = {
+  args: {
+    label: 'Register',
+    color: 'primary',
+  },
+};
